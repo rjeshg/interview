@@ -6,9 +6,11 @@ package com.interview.array;
 public class MaxProductSubarray {
 
     public int maxProduct(int input[]){
-        int max = -1;
+        
+    	    int max = -1;
         int maxNeg = 1;
         int maxSoFar = 1;
+        //test
         for(int i =0; i < input.length; i++){
             if(input[i] == 0){
                 maxNeg = 1;
