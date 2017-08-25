@@ -6,17 +6,19 @@ package com.interview.binarysearch;
 public class BinarySearch {
 
     public int search(int input[],int search){
-        int low = 0;
-        int high = input.length-1;
+        int start = 0;
+        int end = input.length-1;
         int mid = 0;
-        while(low <= high){
-            mid = (low + high)/2;
+        
+        while(start <= end){
+            mid = (start + end)/2;
+            
             if(input[mid] == search){
                 return mid;
             }else if(input[mid] < search){
-                low = mid+1;
+                start = mid+1;
             }else{
-                high = mid-1;
+                end = mid-1;
             }
         }
         return -1;
